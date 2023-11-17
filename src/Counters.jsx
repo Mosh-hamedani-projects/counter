@@ -18,11 +18,10 @@ class Counters extends Component {
         {
           this.state.counters.map( counter => 
             <Counter 
-                key={counter.id}
-                value={counter.value}    
-            >
-              <h3>Title {counter.id}</h3>
-            </Counter> 
+                key={counter.id}        //key is mandatory to pass 
+                value={counter.value}   //sending props to child component
+                id={counter.id}  
+            /> 
         )}
       </>
     );
