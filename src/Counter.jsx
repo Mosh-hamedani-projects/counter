@@ -13,6 +13,8 @@ class Counter extends Component {
     console.log(this.props);
     return (
       <>
+        {this.props.children}
+        {this.props.id}
         <h1>{this.state.count}</h1>
         <button 
           className='btn btn-dark'

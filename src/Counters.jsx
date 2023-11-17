@@ -20,8 +20,10 @@ class Counters extends Component {
             <Counter 
                 key={counter.id}
                 value={counter.value}    
-            /> )
-        }
+            >
+              <h3>Title {counter.id}</h3>
+            </Counter> 
+        )}
       </>
     );
   }
