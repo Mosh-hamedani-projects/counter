@@ -18,7 +18,10 @@ class Counter extends Component {
           className='btn btn-dark'
           //passing reference to onClick event when no argument to pass
           onClick={this.handleIncrement}>Increment</button> 
+
+          <button onClick={this.props.onDelete}>Delete</button>
       </>
+
     );
   }
 }

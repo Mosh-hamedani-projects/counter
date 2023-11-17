@@ -12,6 +12,10 @@ class Counters extends Component {
     ]
   }
 
+  handleDelete=()=>{
+    console.log("event handler called");
+  };
+
   render() { 
     return (
       <>
@@ -21,6 +25,7 @@ class Counters extends Component {
                 key={counter.id}        //key is mandatory to pass 
                 value={counter.value}   //sending props to child component
                 id={counter.id}  
+                onDelete={this.handleDelete}
             /> 
         )}
       </>
