@@ -21,8 +21,9 @@ class Counter extends Component {
 
           
           <button 
-            //passing data from child to parent
-            onClick={this.props.onDelete}>Delete</button>  
+            className='btn btn-danger'
+            //passing data from child to parent, use callback when we need to pass argument
+            onClick={()=>this.props.onDelete(this.props.id)}>Delete</button>  
       </>
 
     );
