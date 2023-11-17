@@ -2,11 +2,15 @@ import { Component } from 'react'
 
 class Counter extends Component {
   
+  state={
+    count:0
+  }
 
   render() { 
     return (
       <>
-        <h2>HI</h2>
+        <h1>{this.state.count}</h1>
+        <button className='btn btn-dark'>Increment</button>
       </>
     );
   }

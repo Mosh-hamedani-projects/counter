@@ -3,13 +3,21 @@ import Counter from "./Counter";
 
 class Counters extends Component {
   
+  state={
+    counters:[
+      {id:1, value:0},
+      {id:2, value:0},
+      {id:3, value:0},
+      {id:4, value:0},
+    ]
+  }
+
   render() { 
     return (
       <>
-        <Counter/>
-        <Counter/>
-        <Counter/>
-        <Counter/>
+        {
+          this.state.counters.map( counter => <Counter key={counter.id}/> )
+        }
       </>
     );
   }
