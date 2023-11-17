@@ -7,6 +7,9 @@ class Counters extends Component {
     return (
       <>
         <Counter/>
+        <Counter/>
+        <Counter/>
+        <Counter/>
       </>
     );
   }
