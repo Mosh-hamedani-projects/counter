@@ -19,7 +19,10 @@ class Counter extends Component {
           //passing reference to onClick event when no argument to pass
           onClick={this.handleIncrement}>Increment</button> 
 
-          <button onClick={this.props.onDelete}>Delete</button>
+          
+          <button 
+            //passing data from child to parent
+            onClick={this.props.onDelete}>Delete</button>  
       </>
 
     );

@@ -25,7 +25,7 @@ class Counters extends Component {
                 key={counter.id}        //key is mandatory to pass 
                 value={counter.value}   //sending props to child component
                 id={counter.id}  
-                onDelete={this.handleDelete}
+                onDelete={this.handleDelete} //receive data from child and handle child event
             /> 
         )}
       </>
