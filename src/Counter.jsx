@@ -2,28 +2,21 @@ import { Component } from 'react'
 
 class Counter extends Component {
   
-  state={
-    count:this.props.value  //parent(<Counters>) se send ki props ko receive kiya
-  }
-
-  handleIncrement=()=>{
-    this.setState({count:this.state.count+1})
-  }
   render() { 
     console.log(this.props);
     return (
       <>
-        <h1>{this.state.count}</h1>
+        <h1>{this.props.counter.value}</h1>
         <button 
           className='btn btn-dark'
           //passing reference to onClick event when no argument to pass
-          onClick={this.handleIncrement}>Increment</button> 
+          onClick={()=>this.props.onIncrement(this.props.counter)}>Increment</button> 
 
           
           <button 
             className='btn btn-danger'
             //passing data from child to parent, use callback when we need to pass argument
-            onClick={()=>this.props.onDelete(this.props.id)}>Delete</button>  
+            onClick={()=>this.props.onDelete(this.props.counter.id)}>Delete</button>  
       </>
 
     );
