@@ -2,19 +2,19 @@ import { Component } from 'react'
 import Counter from "./Counter";
 
 class Counters extends Component {
-  
-  
   render() { 
+    const {onDelete, onIncrement, onDecrement, onReset, counters}=this.props
     return (
       <>
-      <button onClick={this.props.onReset} className="btn btn-primary">Reset</button>
+      <button onClick={onReset} className="btn btn-primary">Reset</button>
         {
-          this.props.counters.map( counter => 
+          counters.map( counter => 
             <Counter 
                 key={counter.id}        //key is mandatory to pass 
                 counter={counter}  
-                onDelete={this.props.onDelete} //receive data from child and handle child event
-                onIncrement={this.props.onIncrement}
+                onDelete={onDelete} //receive data from child and handle child event
+                onIncrement={onIncrement}
+                onDecrement={onDecrement}
             /> 
         )}
       </>
